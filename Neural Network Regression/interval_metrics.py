@@ -58,7 +58,7 @@ def compute_picp(y_true_low, y_true_up, pred_low, pred_up):
     return picp
 
 
-def compare_models(results_dict, decimals=2):
+def compare_models(results_dict, decimals=4):
     df = pd.DataFrame(results_dict).T[["Dmin", "Dmax", "Dstar", "MAEmid"]]
     print(df.round(decimals))
     return df
